@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Formulário de cadastro</h1>
+        <p>
+            ° Nenhum campo pode estar vazio<br>
+            ° Usuário só poderá conter letras e/ou números<br>
+            ° Usuário deverá ter entre 3 e 12 caracteres<br>
+            ° Senha precisa ter entre 6 e 12 caracteres
+        </p>
+
+        <form action="" method="post" class="formulario">
+            <label for="input-teste-1">Nome:</label>
+            <ul id="nomeErro" class="msgErro"></ul>
+            <input type="text" id="input-teste-1" autocomplete="off">
+
+            <label for="input-teste-2">Sobrenome:</label>
+            <ul id="sobrenomeErro" class="msgErro"></ul>
+            <input type="text" id="input-teste-2" autocomplete="off">
+
+            <label for="input-teste-3">CPF:</label>
+            <ul id="cpfErro" class="msgErro"></ul>
+            <input type="text" id="input-teste-3" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off">
+
+            <label for="input-teste-4">Usuário:</label>
+            <ul id="usuarioErro" class="msgErro"></ul>
+            <input type="text" id="input-teste-4" autocomplete="off">
+
+            <label for="input-teste-5">Senha:</label>
+            <ul id="senhaErro" class="msgErro"></ul>
+            <input type="password" id="input-teste-5" autocomplete="off">
+
+            <label for="input-teste-6">Repetir senha:</label>
+            <ul id="repetirSenhaErro" class="msgErro"></ul>
+            <input type="password" id="input-teste-6" autocomplete="off">
+
+            <button id="enviar">Enviar</button>
+        </form>
+    </section>
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
