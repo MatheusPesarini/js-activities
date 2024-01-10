@@ -1,0 +1,9 @@
+npm init -y // para iniciar projeto
+npm install --save-dev @babel/cli @babel/preset-env @babel/core // instalando o node_modules com tudo que o babel precisa
+npx babel main.js -o bundle.js --presets=@babel/env // cria o arquivo bundle.js e 
+faz a conversão imediatada do código do main.js para o bundle.js
+
+dentro do package.json dentro de "scripts" para fazer com que o bundle.js atualize em tempo real será necessário escrever:
+babel ./main.js -o ./bundle.js --presets=@babel/env -w
+
+e digitar npm run babel no terminal
