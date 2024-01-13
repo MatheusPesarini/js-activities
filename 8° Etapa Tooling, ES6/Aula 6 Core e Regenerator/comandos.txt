@@ -1,0 +1,9 @@
+npm init -y // para criar o package.json padrão
+npm i --save-dev @babel/preset-env @babel/cli @babel/core babel-loader webpack webpack-cli regenerator-runtime core-js@2
+// para instalar as requisições do babel com o webpack
+
+** Correção **
+Apagar o core-js e regenerator-runtime do devDependencies no package.json, apagar o node_modules (caso exista) e o package-lock.json
+e executar o seguinte comando no terminal dentro da pasta: npm i core-js regenerator-runtime
+
+npm install --save-dev css-loader
