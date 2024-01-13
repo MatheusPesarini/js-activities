@@ -1,0 +1,32 @@
+"express": "^4.18.2" 
+o ^ significa que o que o framework será atualizado caso seja digitado npm i ou npm update
+
+"express": "4.18.2" 
+caso seja tirado ^, o framework permanecerá nessa versão independente no comando executado
+
+para mudar o framework para devDependencies
+npm install express --save-dev
+
+para dependencies
+npm install express -save-prod
+
+dependencies são os frameworks necessários para a execução do projeto e devDependencies são frameworks que servem 
+apenas para auxiliar no desenvolvimento
+
+para instalar outra versão
+npm install express@2.1.0
+
+**
+npm update atualiza apenas o 2.{{1.0}}
+**
+
+2.1.0
+o 2 seria att que quebra compatibilidade    3.1.0
+o 1 traz funcionalidada q n quebra compat.  2.2.0
+o 0 para correçao de bug                    2.1.1
+
+para listar
+npm ls
+
+para desinstalar
+npm unistall webpack express
