@@ -1,0 +1,2 @@
+Utilizado Mongodb + mongoose para trabalhar com o nosql
+EJS para html dinâmico e demais frameworks
