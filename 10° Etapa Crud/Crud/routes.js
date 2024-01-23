@@ -1,26 +1,26 @@
 const express = require('express');
-const router = express.Router();
+const route = express.Router();
+
 const homeController = require('./src/controllers/homeController');
+const loginController = require('./src/controllers/loginController');
 const contatoController = require('./src/controllers/contatoController');
 
-/*function meuMiddleware(req, res, next) {
-    req.session = { nome: 'Luiz', sobrenome: 'Miranda' };
-    console.log();
-    console.log('Passei no seu middleware.');
-    console.log();
-    next();
-}*/
+const { loginRequired } = require('./src/middlewares/middleware');
 
 // Rotas da home
-router.get('/', /*meuMiddleware,*/ homeController.paginaInicial);/*, function(req, res, next) {
-    console.log('');
-    console.log('Ainda estou aqui...');
-    console.log(`'req.session' dentro da rota: ${req.session.nome} ${req.session.sobrenome}'`)
-    next();
-});*/
-router.post('/', homeController.trataPost);
+route.get('/', homeController.index);
+
+// Rotas de login
+route.get('/login/index', loginController.index);
+route.post('/login/register', loginController.register);
+route.post('/login/login', loginController.login);
+route.get('/login/logout', loginController.logout);
 
 // Rotas de contato
-router.get('/contato', contatoController.paginaInicial);
+route.get('/contato/index', loginRequired, contatoController.index);
+route.post('/contato/register', loginRequired, contatoController.register);
+route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
+route.post('/contato/edit/:id', loginRequired, contatoController.edit);
+route.get('/contato/delete/:id', loginRequired, contatoController.delete);
 
-module.exports = router;
+module.exports = route;
