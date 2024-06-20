@@ -1,1 +1,1 @@
-Atividades relacionadas a um curso de JavaScript e TypeScript.
+Atividades relacionadas a um curso de JavaScript.
